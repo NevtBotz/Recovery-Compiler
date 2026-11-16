@@ -26,4 +26,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: recovery
-          path: /home/runner/work/out/target/product/PD1818HF_EX/recovery.img
+          path: work/out/target/product/PD1818HF_EX/recovery.img
+
