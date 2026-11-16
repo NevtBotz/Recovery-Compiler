@@ -19,7 +19,7 @@ jobs:
           KERNEL_LINK: ""
           TARGET: "recoveryimage"
           FLAVOR: "eng"
-          EXTRA_CMD: ""
+          EXTRA_CMD: "sudo ln -sf /lib/x86_64-linux-gnu/libtinfo.so.6 /usr/lib/x86_64-linux-gnu/libtinfo.so.5; sudo ln -sf /lib/x86_64-linux-gnu/libncurses.so.6 /usr/lib/x86_64-linux-gnu/libncurses.so.5"
           TZ: "Asia/Makassar"
 
       - name: Upload recovery image
