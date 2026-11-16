@@ -1,0 +1,27 @@
+name: Build TWRP Y91c
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Recovery Compilation
+        uses: CarbonatedBlack/Recovery-Compiler@production
+        env:
+          MANIFEST: "https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni -b twrp-9.0"
+          DT_LINK: "https://github.com/NevtBotz/android_device_vivo_PD1818HF_EX"
+          VENDOR: "vivo"
+          CODENAME: "PD1818HF_EX"
+          KERNEL_LINK: ""
+          TARGET: "recoveryimage"
+          FLAVOR: "eng"
+          EXTRA_CMD: ""
+          TZ: "Asia/Makassar"
+
+      - name: Upload recovery image
+        uses: actions/upload-artifact@v4
+        with:
+          name: recovery
+          path: /home/runner/work/out/target/product/PD1818HF_EX/recovery.img
