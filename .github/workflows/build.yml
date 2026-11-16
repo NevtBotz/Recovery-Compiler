@@ -1,5 +1,6 @@
 name: Build TWRP Y91c
 
+
 on:
   workflow_dispatch:
 
@@ -7,6 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-22.04
     steps:
+      - uses: actions/checkout@v4
       - name: Recovery Compilation
         uses: NevtBotz/Recovery-Compiler@beta
         env:
