@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Recovery Compilation
-        uses: CarbonatedBlack/Recovery-Compiler@production
+        uses: NevtBotz/Recovery-Compiler@beta
         env:
           MANIFEST: "https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni -b twrp-9.0"
           DT_LINK: "https://github.com/NevtBotz/android_device_vivo_PD1818HF_EX"
